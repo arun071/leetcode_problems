@@ -2,8 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int arr[] = {0, 2, 1, 5};
-        int result[] = TwoSum.twoSum(arr, 3);
-        System.out.println(Arrays.toString(result));
+        int nums[]={1,2,2,3,5,5,6,8};
+        System.out.println( RemoveDuplicatesSortedArray.removeDuplicates(nums));
     }
 }
