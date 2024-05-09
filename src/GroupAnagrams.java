@@ -1,21 +1,22 @@
 import java.util.*;
-
 public class GroupAnagrams {
     public static List<List<String>> groupAnagrams(String[] strs) {
-        if (strs == null || strs.length == 0) {
-            return new ArrayList<>();
-        }
-        Map<String, List<String>> map = new HashMap<>();
-        for (String str : strs) {
-            char[] charArray = str.toCharArray();
-            Arrays.sort(charArray);
-            String sortedStr = String.valueOf(charArray);
-            if (!map.containsKey(sortedStr)) {
-                map.put(sortedStr, new ArrayList<>());
+        List<List<String>> ans = new ArrayList<>();
+        HashMap<String, List<String>> mymap = new HashMap<>();
+        for (String s : strs) {
+            char[] arr = s.toCharArray();
+            Arrays.sort(arr);
+            String sortedStr = String.valueOf(arr);
+            if (!mymap.containsKey(sortedStr)) {
+                ArrayList<String> temp = new ArrayList<>();
+                temp.add(s);
+                mymap.put(sortedStr, temp);
+            } else {
+                mymap.get(sortedStr).add(s);
             }
-            map.get(sortedStr).add(str);
         }
-        return new ArrayList<>(map.values());
+        ans.addAll(mymap.values());
+        return ans;
     }
 
     public static void main(String[] args) {
@@ -24,4 +25,28 @@ public class GroupAnagrams {
     }
 }
 //49.Group Anagrams
-//int arr[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89,97, 101};
+//Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+//
+//An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+//
+//
+//
+//        Example 1:
+//
+//Input: strs = ["eat","tea","tan","ate","nat","bat"]
+//Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+//Example 2:
+//
+//Input: strs = [""]
+//Output: [[""]]
+//Example 3:
+//
+//Input: strs = ["a"]
+//Output: [["a"]]
+//
+//
+//Constraints:
+//
+//        1 <= strs.length <= 104
+//        0 <= strs[i].length <= 100
+//strs[i] consists of lowercase English letters.
