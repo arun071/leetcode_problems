@@ -1,23 +1,23 @@
-public class Maxprofit {
+public class BestTimeToBuyStockII {
     public static int maxProfit(int[] prices) {
-        int maxProfit = 0;
-        int currentMaxProfit = 0;
-        int currentPrice = prices[0];
-        for (int i = 1; i < prices.length; i++) {
-            if (currentPrice > prices[i]) {
-                currentPrice = prices[i];
-            } else {
-                currentMaxProfit = Math.max(currentMaxProfit, prices[i] - currentPrice);
-                maxProfit += currentMaxProfit;
-                currentPrice = prices[i];
-                currentMaxProfit=0;
+            int maxProfit = 0;
+            int currentMaxProfit = 0;
+            int currentPrice = prices[0];
+            for (int i = 1; i < prices.length; i++) {
+                if (currentPrice > prices[i]) {
+                    currentPrice = prices[i];
+                } else {
+                    currentMaxProfit = Math.max(currentMaxProfit, prices[i] - currentPrice);
+                    maxProfit += currentMaxProfit;
+                    currentPrice = prices[i];
+                    currentMaxProfit=0;
 
+                }
             }
-        }
-        return maxProfit;
+            return maxProfit;
 
+        }
     }
-}
 //    Best Time to Buy and Sell Stock II
 //You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
 //
@@ -51,3 +51,7 @@ public class Maxprofit {
 //
 //        1 <= prices.length <= 3 * 104
 //        0 <= prices[i] <= 104
+
+
+
+
