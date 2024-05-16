@@ -1,6 +1,4 @@
-import java.util.HashSet;
-
-public class maximumSubArray {
+public class MaximumSubArray {
        public static long MaxsubArr(int arr[]) {
         int maxValue = Integer.MIN_VALUE;
         int currentSum = 0;
