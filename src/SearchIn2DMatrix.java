@@ -4,7 +4,7 @@ public class SearchIn2DMatrix {
         int cols = matrix[0].length;
         int i = 0; // start from the top-right corner
         int j = cols - 1;
-        while (i < matrix.length && j >=0) {
+        while (i < rows && j >=0) {
             if (matrix[i][j] == target)
                 return true;
             else if (matrix[i][j] < target)

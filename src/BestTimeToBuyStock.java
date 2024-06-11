@@ -7,9 +7,7 @@ public class BestTimeToBuyStock {
                 currentPrice = prices[i];
             } else {
                 int currentProfit = prices[i] - currentPrice;
-
                 maxProfit = Math.max(maxProfit,currentProfit);
-
             }
         }
         return maxProfit;

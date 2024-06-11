@@ -11,7 +11,6 @@ public class BestTimeToBuyStockII {
                     maxProfit += currentMaxProfit;
                     currentPrice = prices[i];
                     currentMaxProfit=0;
-
                 }
             }
             return maxProfit;
