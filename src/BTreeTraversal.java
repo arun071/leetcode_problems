@@ -27,7 +27,7 @@ public class BTreeTraversal {
     }
 
 
-    public static List<Integer> inorderTraversal(TreeNode root) {
+    public static List<Integer> Traversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         Inorder(root, ans);
         return ans;
@@ -38,7 +38,7 @@ public class BTreeTraversal {
         root.left = new TreeNode();
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-        System.out.println(inorderTraversal(root));
+        System.out.println(Traversal(root));
     }
 }
 //94. Binary Tree Inorder Traversal
