@@ -10,7 +10,7 @@ public class CheckifArrayIsSortedandRotated {
     }
 
     public static void main(String[] args) {
-        int arr[] = {5,6,1,2,3,4};
+        int arr[] = {1,2,3,5,6};
         System.out.println(check(arr));
     }
 }

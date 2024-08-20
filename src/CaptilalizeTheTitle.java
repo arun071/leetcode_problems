@@ -42,6 +42,10 @@ public class CaptilalizeTheTitle {
         return String.valueOf(ch);
 
     }
+
+    public static void main(String[] args) {
+
+    }
 }
 
 //2129. Capitalize the Title
