@@ -13,7 +13,6 @@ public class Convert1DArrayInto2DArray {
         }
         return ans;
     }
-
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new int[][]{}));
     }
