@@ -40,7 +40,7 @@ public class SpiralMatrix {
             ++colStart;
 
         }
-        return ans;
+       return ans;
     }
 
     public static void main(String[] args) {
@@ -50,8 +50,9 @@ public class SpiralMatrix {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(Arrays.toString(arr[i]));
         }
+        spiralOrder(arr);
 
-        System.out.println(Arrays.asList(spiralOrder(arr)));
+
     }
 }
 //54. Spiral Matrix
